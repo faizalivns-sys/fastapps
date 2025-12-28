@@ -1,11 +1,752 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastApps</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastApps.in - 100% App Malware Scanned Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="project final.css">
+  <script src="project final.js"></script>
 </head>
-<body>
-    <h1>Hello Fast Apps</h1>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- 🏠 App Download Header -->
+  <header class="text-white body-font shadow-md header-gradient border-b-4 border-white">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-600 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">FastApps.in</span>
+      </a>
+      <!-- Mobile menu button -->
+      <button class="md:hidden ml-auto text-white focus:outline-none" id="mobile-menu-button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <nav class="hidden md:flex md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href="#android" class="mr-5 hover:text-gray-200">Android</a>
+        <a href="#windows" class="mr-5 hover:text-gray-200">Windows</a>
+        <a href="#media" class="mr-5 hover:text-gray-200">Media Players</a>
+        <a href="#browsers" class="mr-5 hover:text-gray-200">Browsers</a>
+      </nav>
+      <!-- Mobile menu -->
+      <nav id="mobile-menu" class="hidden md:hidden w-full mt-4">
+        <div class="flex flex-col space-y-3 pt-4 pb-2 border-t border-gray-700">
+          <a href="#android" class="block py-2 hover:text-gray-200">Android</a>
+          <a href="#windows" class="block py-2 hover:text-gray-200">Windows</a>
+          <a href="#media" class="block py-2 hover:text-gray-200">Media Players</a>
+          <a href="#browsers" class="block py-2 hover:text-gray-200">Browsers</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🔝 Hero Section -->
+  <section class="text-gray-800 bg-gray-50 body-font animate-on-scroll hero-section">
+    <div class="container mx-auto flex px-5 py-16 items-center justify-center flex-col">
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium marquee-3d-text">Discover, Download & Enjoy!</h1>
+        <p class="mb-8 leading-relaxed">Your trusted destination for fast & secure app downloads. Search for your
+          favorite app below.</p>
+        <div class="flex w-full justify-center">
+          <input
+            class="bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out w-full md:w-1/2"
+            type="text" id="searchInput" placeholder="Search for your favorite app or game..." list="app-list"
+            onkeyup="onSearch()">
+          <button
+            class="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg ml-4" onclick="onSearch()">Search</button>
+        </div>
+        <datalist id="app-list">
+          <!-- Android Apps -->
+          <option value="Telegram">
+          <option value="Music Player X">
+          <option value="Quick Share">
+          <option value="Task Manager">
+          <option value="Weather Now">
+          <option value="Secure VPN">
+          <option value="Fitness Tracker">
+          <option value="Photo Editor Pro">
+          
+          <!-- Windows Software -->
+          <option value="System Optimizer">
+          <option value="PDF Reader">
+          <option value="Video Converter">
+          <option value="File Manager">
+          <option value="Disk Cleaner">
+          <option value="Driver Updater">
+          <option value="Backup Tool">
+          <option value="Screen Recorder">
+          
+          <!-- Media Players -->
+          <option value="VLC Player">
+          <option value="MX Player">
+          <option value="PotPlayer">
+          <option value="AIMP">
+          <option value="foobar2000">
+          <option value="MusicBee">
+          <option value="KMPlayer">
+          <option value="Audacious">
+          
+          <!-- Browsers -->
+          <option value="Chrome">
+          <option value="Firefox">
+          <option value="Brave Browser">
+          <option value="Opera GX">
+          
+          <!-- Games -->
+          <option value="Minecraft">
+          <option value="Fortnite">
+          <option value="Valorant">
+          <option value="Among Us">
+          <option value="Grand Theft Auto V">
+          <option value="Call of Duty">
+          <option value="The Witcher 3">
+          <option value="Cyberpunk 2077">
+          <option value="Apex Legends">
+          <option value="Overwatch">
+          <option value="Red Dead Redemption 2">
+          <option value="Rocket League">
+          <option value="Counter-Strike">
+          <option value="World of Warcraft">
+          <option value="FIFA 24">
+          <option value="The Sims 4">
+          <option value="Assassin's Creed">
+          <option value="God of War">
+          <option value="Elden Ring">
+          <option value="Fall Guys">
+          <option value="Halo">
+          <option value="Destiny 2">
+          <option value="Star Wars Battlefront">
+          <option value="Resident Evil">
+          <option value="Spider-Man">
+          <option value="Super Smash Bros">
+          <option value="Animal Crossing">
+          <option value="DOOM">
+        </datalist>
+      </div>
+    </div>
+  </section>
+  <!-- 🖼️ Refined 3D Carousel -->
+  <div class="carousel relative container mx-auto max-w-3xl my-6 rounded-lg overflow-hidden">
+    <div class="carousel-images flex h-96">
+      <img src="../../carsol1.avif" alt="Banner 1" class="w-full h-full object-contain object-center flex-shrink-0">
+      <img src="../../carsol2.avif" alt="Banner 2" class="w-full h-full object-contain object-center flex-shrink-0">
+      <img src="../../carasol3.avif" alt="Banner 3" class="w-full h-full object-contain object-center flex-shrink-0">
+      <img src="../../carasol%204.avif" alt="Banner 4" class="w-full h-full object-contain object-center flex-shrink-0">
+    </div>
+    <button
+      class="carousel-btn prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 text-gray-900 border-0 p-2 rounded-full cursor-pointer">&#10094;</button>
+    <button
+      class="carousel-btn next absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 text-gray-900 border-0 p-2 rounded-full cursor-pointer">&#10095;</button>
+  </div>
+
+  <!-- 📂 Featured Categories -->
+  <section class="text-gray-800 bg-gray-50 body-font animate-on-scroll">
+    <div
+      class="container px-3 md:px-5 py-8 md:py-16 mx-auto category-gradient rounded-xl shadow-sm category-animate text-white">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white wave-text">
+          <span>E</span>
+          <span>x</span>
+          <span>p</span>
+          <span>l</span>
+          <span>o</span>
+          <span>r</span>
+          <span>e</span>
+          <span> </span>
+          <span>C</span>
+          <span>a</span>
+          <span>t</span>
+          <span>e</span>
+          <span>g</span>
+          <span>o</span>
+          <span>r</span>
+          <span>i</span>
+          <span>s</span>
+        </h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">Discover top apps by section. Tap a card to
+          dive in.</p>
+      </div>
+      <div class="flex flex-wrap -m-4 text-center tiles-animate">
+        <div class="p-4 sm:w-1/2 lg:w-1/5 w-full animate-on-scroll bg-gray-50">
+          <a href="project final 3.html"
+            class="border-2 border-gray-200 px-4 py-1 rounded-lg block hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition">
+            <span class="text-blue-600 w-8 h-8 mb-0 inline-block text-3xl">📱</span>
+            <h2 class="title-font font-medium text-lg text-gray-900">Android</h2>
+          </a>
+        </div>
+        <div class="p-4 sm:w-1/2 lg:w-1/5 w-full animate-on-scroll bg-gray-50">
+          <a href="project final 4.html"
+            class="border-2 border-gray-200 px-4 py-1 rounded-lg block hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition">
+            <span class="text-blue-600 w-8 h-8 mb-0 inline-block text-3xl">💻</span>
+            <h2 class="title-font font-medium text-lg text-gray-900">Windows</h2>
+          </a>
+        </div>
+        <div class="p-4 sm:w-1/2 lg:w-1/5 w-full animate-on-scroll bg-gray-50">
+          <a href="project final 5.html"
+            class="border-2 border-gray-200 px-4 py-1 rounded-lg block hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition">
+            <span class="text-blue-600 w-8 h-8 mb-0 inline-block text-3xl">🔧</span>
+            <h2 class="title-font font-medium text-lg text-gray-900">Tools</h2>
+          </a>
+        </div>
+        <div class="p-4 sm:w-1/2 lg:w-1/5 w-full animate-on-scroll bg-gray-50">
+          <a href="project final 8.html"
+            class="border-2 border-gray-200 px-4 py-1 rounded-lg block hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition">
+            <span class="text-blue-600 w-8 h-8 mb-0 inline-block text-3xl">🎮</span>
+            <h2 class="title-font font-medium text-lg text-gray-900">Games</h2>
+          </a>
+        </div>
+        <div class="p-4 sm:w-1/2 lg:w-1/5 w-full animate-on-scroll bg-gray-50">
+          <a href="project final 9.html"
+            class="border-2 border-gray-200 px-4 py-1 rounded-lg block hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition">
+            <span class="text-blue-600 w-8 h-8 mb-0 inline-block text-3xl">🌐</span>
+            <h2 class="title-font font-medium text-lg text-gray-900">Browse</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Sections -->
+  <div id="apps" class="space-y-8">
+
+    <!-- 📱 Android Apps -->
+    <section id="android" class="text-gray-800 bg-gray-50 body-font animate-on-scroll">
+      <div class="container px-3.5 py-10 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">📱 Android Apps</h1>
+            <div class="h-1 w-20 bg-blue-600 rounded"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- App Card Example -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6"
+              src="https://imagepng.org/wp-content/uploads/2017/11/telegram-icone-icon.png" alt="Telegram">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">UTILITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Telegram</h2>
+            <p class="leading-relaxed text-base">A fast and secure messaging app.</p>
+            <a href="project final 1.html"
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn inline-block"><span>Download</span></a>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../music.jpg"
+              alt="Music Player X">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">ENTERTAINMENT</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Music Player X</h2>
+            <p class="leading-relaxed text-base">Enjoy your favorite music offline.</p>
+            <a href="project final 10.html"
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn inline-block"><span>Download</span></a>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../quick.jpg" alt="Quick Share">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">UTILITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Quick Share</h2>
+            <p class="leading-relaxed text-base">File sharing made easy and fast.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../task.jpg" alt="Task Manager">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">PRODUCTIVITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Task Manager</h2>
+            <p class="leading-relaxed text-base">Organize your tasks and boost productivity.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../weather.jpg"
+              alt="Weather Now">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">UTILITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Weather Now</h2>
+            <p class="leading-relaxed text-base">Get real-time weather forecasts.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../secure%20vpn.png"
+              alt="Secure VPN">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">SECURITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Secure VPN</h2>
+            <p class="leading-relaxed text-base">Browse securely and privately.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../fitness.jpg"
+              alt="Fitness Tracker">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">HEALTH</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fitness Tracker</h2>
+            <p class="leading-relaxed text-base">Monitor your daily activity and health.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../photo.png"
+              alt="Photo Editor Pro">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">PRODUCTIVITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Photo Editor Pro</h2>
+            <p class="leading-relaxed text-base">Edit photos with professional tools.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <!-- Add more app cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 💻 Windows Software -->
+    <section id="windows" class="text-gray-800 bg-gray-50 body-font animate-on-scroll">
+      <div class="container px-3.5 py-10 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">💻 Windows Software</h1>
+            <div class="h-1 w-20 bg-blue-600 rounded"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- App Card Example -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../system%20optimizer.jpg"
+              alt="System Optimizer">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">SYSTEM</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">System Optimizer</h2>
+            <p class="leading-relaxed text-base">Keep your PC running smoothly.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../pdf%20reader.png"
+              alt="PDF Reader">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">PRODUCTIVITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">PDF Reader</h2>
+            <p class="leading-relaxed text-base">View and annotate PDF documents.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../video%20convert.jpg"
+              alt="Video Converter">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">MULTIMEDIA</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Video Converter</h2>
+            <p class="leading-relaxed text-base">Convert videos to any format.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../file%20manager.jpg"
+              alt="File Manager">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">UTILITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">File Manager</h2>
+            <p class="leading-relaxed text-base">Manage files and folders efficiently.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../disk%20cleaner.jpg"
+              alt="Disk Cleaner">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">SYSTEM</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Disk Cleaner</h2>
+            <p class="leading-relaxed text-base">Free up space and optimize storage.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../driver%20updater.jpg"
+              alt="Driver Updater">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">SYSTEM</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Driver Updater</h2>
+            <p class="leading-relaxed text-base">Update and manage device drivers.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../backup%20tools.png"
+              alt="Backup Tool">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">UTILITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Backup Tool</h2>
+            <p class="leading-relaxed text-base">Backup files and restore easily.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../screen%20recorder.jpg"
+              alt="Screen Recorder">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">UTILITY</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Screen Recorder</h2>
+            <p class="leading-relaxed text-base">Record your screen with ease.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <!-- Add more app cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 🎵 Media Players -->
+    <section id="media" class="text-gray-800 bg-gray-50 body-font animate-on-scroll">
+      <div class="container px-3.5 py-10 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">🎵 Media Players</h1>
+            <div class="h-1 w-20 bg-blue-600 rounded"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- App Card Example -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../vlc%20player.jpg"
+              alt="VLC Player">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">VIDEO & AUDIO</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">VLC Player</h2>
+            <p class="leading-relaxed text-base">Plays everything. Simple, fast, powerful.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../mx%20player.jpg"
+              alt="MX Player">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">VIDEO & AUDIO</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">MX Player</h2>
+            <p class="leading-relaxed text-base">Powerful video player with acceleration.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../port%20player.jpg"
+              alt="PotPlayer">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">VIDEO & AUDIO</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">PotPlayer</h2>
+            <p class="leading-relaxed text-base">Comprehensive multimedia player.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../Aimp%20player.jpg" alt="AIMP">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">AUDIO</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">AIMP</h2>
+            <p class="leading-relaxed text-base">Lightweight, high-quality audio player with skins.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../foober.jpg" alt="foobar2000">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">AUDIO</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">foobar2000</h2>
+            <p class="leading-relaxed text-base">Advanced audio player with powerful customization.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../music%20bee.webp"
+              alt="MusicBee">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">AUDIO</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">MusicBee</h2>
+            <p class="leading-relaxed text-base">Organize, play, and discover music beautifully.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../km%20player.avif"
+              alt="KMPlayer">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">AUDIO</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">KMPlayer</h2>
+            <p class="leading-relaxed text-base">Versatile media player with broad codec support.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../audacious.jpg"
+              alt="Audacious">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">AUDIO</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Audacious</h2>
+            <p class="leading-relaxed text-base">Open-source audio player with low resource usage.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+
+          <!-- Add more app cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌐 Browsers -->
+    <section id="browsers" class="text-gray-800 bg-gray-50 body-font animate-on-scroll">
+      <div class="container px-3.5 py-10 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">🌐 Browsers</h1>
+            <div class="h-1 w-20 bg-blue-600 rounded"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- App Card Example -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../chrom.webp" alt="Chrome">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">BROWSER</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Chrome</h2>
+            <p class="leading-relaxed text-base">Fast, simple, and secure web browser.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../fire%20fox.jpg" alt="Firefox">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">BROWSER</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Firefox</h2>
+            <p class="leading-relaxed text-base">A browser that puts privacy first.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../brave.jpg"
+              alt="Brave Browser">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">BROWSER</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Brave Browser</h2>
+            <p class="leading-relaxed text-base">Secure, fast, and private browsing.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl animate-on-scroll">
+            <img class="h-40 rounded w-full object-contain object-center mb-6" src="../../opera%20gx.jpg"
+              alt="Opera GX">
+            <h3 class="tracking-widest text-blue-600 text-xs font-medium title-font">GAMING BROWSER</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Opera GX</h2>
+            <p class="leading-relaxed text-base">The browser for gamers.</p>
+            <button
+              class="mt-4 text-white bg-blue-600 border-0 py-1 px-4 focus:outline-none hover:bg-blue-700 rounded download-btn"><span>Download</span></button>
+          </div>
+
+          <!-- Add more app cards here -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 🛡️ Website Features & Security Section -->
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 md:p-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">
+        <span class="aurora-text">Why Choose FastApps.in?</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Security Feature -->
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Advanced Security</h3>
+          <p class="text-gray-600">All our apps are thoroughly scanned and verified for malware, ensuring your device
+            stays protected. We prioritize your digital safety above all else.</p>
+        </div>
+
+        <!-- Fast Downloads -->
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Lightning Fast Downloads</h3>
+          <p class="text-gray-600">Experience blazing-fast download speeds with our optimized servers. Get your favorite
+            apps in seconds, not minutes.</p>
+        </div>
+
+        <!-- Trusted Source -->
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Trusted by Millions</h3>
+          <p class="text-gray-600">Join millions of satisfied users who trust FastApps.in for their software needs.
+            We've been delivering quality apps since 2015.</p>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          Our commitment to security, speed, and reliability makes us the #1 choice for app downloads.
+          Every app is manually reviewed and tested to ensure it meets our high standards for quality and safety.
+        </p>
+        <div class="mt-6 flex flex-wrap justify-center gap-4">
+          <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">✅ 100% Malware Free</span>
+          <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">✅ Fast Download
+            Servers</span>
+          <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">✅ 24/7 Support</span>
+          <span class="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">✅ Regular Security
+            Updates</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔚 Footer Section -->
+  <footer class="text-gray-400 bg-gradient-to-r from-gray-800 to-gray-900 body-font animate-on-scroll">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <a class="flex title-font font-medium items-center justify-center md:justify-start text-white mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-600 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">FastApps.in</span>
+          </a>
+          <p class="mt-2 text-sm text-gray-500">Your trusted source for fast and secure app downloads.</p>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li><a href="#android" class="text-gray-400 hover:text-white">Android</a></li>
+            <li><a href="#windows" class="text-gray-400 hover:text-white">Windows</a></li>
+            <li><a href="#media" class="text-gray-400 hover:text-white">Media Players</a></li>
+            <li><a href="#browsers" class="text-gray-400 hover:text-white">Browsers</a></li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">COMPANY</h2>
+          <nav class="list-none mb-10">
+            <li><a class="text-gray-400 hover:text-white">About Us</a></li>
+            <li><a class="text-gray-400 hover:text-white">Contact</a></li>
+            <li><a class="text-gray-400 hover:text-white">Careers</a></li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">LEGAL</h2>
+          <nav class="list-none mb-10">
+            <li><a class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+            <li><a class="text-gray-400 hover:text-white">Terms of Service</a></li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-700">
+      <div class="container px-5 py-12 mx-auto flex md:flex-row flex-col">
+        <div
+          class="lg:w-2/3 md:w-1/2 bg-gray-800 rounded-lg overflow-hidden md:mr-10 p-6 flex items-end justify-start relative"
+          style="height: 350px;">
+          <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0"
+            marginwidth="0" scrolling="no"
+            src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=India&ie=UTF8&t=&z=4&iwloc=B&output=embed"
+            style="filter: grayscale(1) contrast(1.2) opacity(0.2);"></iframe>
+          <div class="bg-gray-900 relative flex flex-wrap py-4 rounded shadow-md bg-opacity-75">
+            <div class="lg:w-1/2 px-6">
+              <h2 class="title-font font-semibold text-white tracking-widest text-xs">ADDRESS</h2>
+              <p class="mt-1 text-gray-400">123 App Street, Tech City, India</p>
+            </div>
+            <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+              <h2 class="title-font font-semibold text-white tracking-widest text-xs">EMAIL</h2>
+              <a class="text-indigo-400 leading-relaxed">contact@fastapps.in</a>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-0 mt-8 md:mt-0">
+          <h2 class="text-white text-lg mb-1 font-medium title-font">Contact Us</h2>
+          <p class="leading-relaxed mb-5 text-gray-400 text-sm">Have a question? Drop us a message!</p>
+          <div class="relative mb-2">
+            <label for="footer-name" class="leading-7 text-sm text-gray-400">Name</label>
+            <input type="text" id="footer-name" name="name"
+              class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <div class="relative mb-2">
+            <label for="footer-email" class="leading-7 text-sm text-gray-400">Email</label>
+            <input type="email" id="footer-email" name="email"
+              class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <div class="relative mb-2">
+            <label for="footer-message" class="leading-7 text-sm text-gray-400">Message</label>
+            <textarea id="footer-message" name="message"
+              class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-24 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+          <button
+            class="text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg mt-2">Send</button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-900 bg-opacity-75">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-400 text-sm text-center sm:text-left">© 2025 FastApps.in —
+          <a class="text-gray-500 ml-1" rel="noopener noreferrer" target="_blank">Designed by Faiz</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-gray-400 hover:text-white">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400 hover:text-white">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400 hover:text-white">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400 hover:text-white">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
 </body>
+
 </html>

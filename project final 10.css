@@ -1,0 +1,153 @@
+/* Enhanced scroll animations with 3D effects */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px) rotateX(10deg) scale(0.95);
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) rotateX(0) scale(1);
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Download button animation - faster */
+.download-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(0);
+}
+
+.download-btn span {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.download-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.download-btn:hover span {
+  letter-spacing: 1.5px;
+  transform: translateX(5px);
+}
+
+.download-btn:hover::before {
+  left: 100%;
+}
+
+.download-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+/* App card hover animation - faster */
+.app-card {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(0);
+  will-change: transform;
+}
+
+.app-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Enhanced rating section animation */
+.rating-section {
+  animation: pulse 1.5s infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Star rating visualization */
+.star-rating {
+  transition: all 0.2s ease;
+}
+
+.star-rating:hover {
+  transform: scale(1.1);
+}
+
+/* Review card styling */
+.review-card {
+  transition: all 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Load more button animation */
+.load-more-btn {
+  transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+  letter-spacing: 0.5px;
+}
+
+/* Form input focus animation - faster */
+#reviewForm input, #reviewForm select, #reviewForm textarea {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#reviewForm input:focus, #reviewForm select:focus, #reviewForm textarea:focus {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Submit button animation - faster */
+#reviewForm button, .submit-btn {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(0);
+  position: relative;
+  overflow: hidden;
+}
+
+#reviewForm button:hover, .submit-btn:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Button shine effect */
+#reviewForm button::before, .submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#reviewForm button:hover::before, .submit-btn:hover::before {
+  left: 100%;
+}
