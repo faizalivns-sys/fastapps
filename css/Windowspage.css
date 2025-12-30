@@ -1,0 +1,144 @@
+.header-gradient {
+  background: linear-gradient(to right, #667eea, #764ba2); /* Blue to Purple Gradient */
+}
+
+/* Copying animations from project final 3.html */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Absolute positioned header */
+.header-absolute {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Add padding to body to account for fixed header */
+body {
+  padding-top: 70px; /* Adjust based on header height */
+}
+
+/* Animated Download Button */
+.animated-download-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.animated-download-btn:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animated-download-btn:hover span {
+  animation: textSlide 0.3s ease;
+  display: inline-block;
+}
+
+@keyframes textSlide {
+  0% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animated-download-btn:focus {
+  outline: none;
+}
+
+/* Slow app card hover animation */
+.app-card-hover {
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.app-card-hover:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Fixed Typing animation - slower with delay and restart */
+.typing-animation {
+  overflow: hidden;
+  border-right: 2px solid #4F46E5;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: typing 8s steps(30, end) infinite,
+             blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #4F46E5; }
+}
+
+/* Star Rating Styles */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.star {
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #fbbf24;
+}
+
+.rating-section-ads {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 3rem auto 2rem;
+  max-width: 1000px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.rating-card-ads {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.rating-card-ads:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
