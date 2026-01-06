@@ -45,32 +45,32 @@ document.addEventListener('DOMContentLoaded', function() {
   const games2d = [
     {
       title: "Minecraft",
-      image: "  ../../Minecraft.jpg",
+      image: "../assets/images/Minecraft.jpg",
       description: "Build, explore, and survive in infinite block-based worlds with creative and survival modes."
     },
     {
       title: "Fortnite",
-      image: "../../Fortnite.webp",
+      image: "../assets/images/Fortnite.webp",
       description: "Fast-paced battle royale with building mechanics and constantly evolving gameplay."
     },
     {
       title: "GTA V",
-      image: "../../Grand Theft Auto V.jpg",
+      image: "../assets/images/Grand Theft Auto V.jpg",
       description: "Open-world action-adventure with multiple protagonists and extensive online mode."
     },
     {
       title: "The Witcher 3",
-      image: "../../The Witcher 3.jpg",
+      image: "../assets/images/The Witcher 3.jpg",
       description: "Epic open-world RPG with monster hunting, choices that matter, and rich storytelling."
     },
     {
       title: "Cyberpunk 2077",
-      image: "../../Cyberpunk 2077.jpg",
+      image: "../assets/images/Cyberpunk 2077.jpg",
       description: "Futuristic open-world RPG set in Night City with cybernetic enhancements and choices."
     },
     {
       title: "Red Dead Redemption 2",
-      image: "../../red dead redemption 2.jpg",
+      image: "../assets/images/red dead redemption 2.jpg",
       description: "Epic western adventure in the dying days of the American frontier with immersive storytelling."
     }
   ];
