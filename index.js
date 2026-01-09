@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         entry.target.classList.remove('is-visible');
       }
     });
+  }, {
+    // Optimize for performance
+    threshold: 0.1, // Trigger when 10% of element is visible
+    rootMargin: '0px 0px -50px 0px' // Trigger earlier for smoother experience
   });
 
   const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');

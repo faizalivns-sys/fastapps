@@ -1,6 +1,19 @@
     .carousel-images {
       transition: transform 0.5s ease-in-out;
       width: 100%;
+      will-change: transform;
+    }
+
+    /* Improve scroll performance */
+    body {
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    /* Optimize for mobile rendering */
+    .app-card, .category-card, .feature-card {
+      transform: translateZ(0); /* Enable hardware acceleration */
+      backface-visibility: hidden;
+      perspective: 1000px;
     }
     
     .carousel-images img {
@@ -8,12 +21,14 @@
       width: 100%;
       flex-shrink: 0;
       object-fit: contain;
+      will-change: transform;
     }
 
     .animate-on-scroll {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      will-change: opacity, transform;
     }
 
     /* Animation for elements with animate-on-scroll class */
@@ -21,11 +36,14 @@
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      will-change: opacity, transform;
     }
 
     .animate-on-scroll.is-visible {
       opacity: 1;
       transform: translateY(0);
+      /* Use hardware acceleration */
+      transform: translateZ(0);
     }
 
     .hero-section {
@@ -165,6 +183,7 @@
       animation: marquee-ping-pong 10s linear infinite;
       white-space: nowrap;
       overflow: hidden;
+      will-change: transform;
     }
 
     @keyframes marquee-ping-pong {
@@ -197,6 +216,7 @@
     .wave-text span {
       display: inline-block;
       animation: wave 2s ease-in-out infinite;
+      will-change: transform;
     }
 
     .wave-text span:nth-child(1) {
@@ -534,4 +554,32 @@
 
     .animated-download-btn:focus {
       outline: none;
+    }
+
+    /* Improve scroll performance */
+    body {
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    /* Optimize for mobile rendering */
+    .app-card, .category-card, .feature-card {
+      transform: translateZ(0); /* Enable hardware acceleration */
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+
+    /* Optimize for mobile performance */
+    @media (max-width: 768px) {
+      .animate-on-scroll {
+        transition: opacity 0.3s ease-out; /* Reduce animation on mobile */
+        transform: none; /* Remove transform on mobile for performance */
+      }
+      
+      .animate-on-scroll.is-visible {
+        transform: none;
+      }
+      
+      .marquee-3d-text {
+        animation: none; /* Disable heavy animations on mobile */
+      }
     }
